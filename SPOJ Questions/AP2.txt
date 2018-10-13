@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	  int t;
+	  scanf("%d",&t);                // t:- no. of test cases
+	  while(t--)
+	  	 {
+	  	 	   long long int a,b,sum;         // a:- 3rd term fro first  b:- 3rd term from last
+	  	 	                                   // sum:- sum of the series
+
+	  	 	   scanf("%lld%lld%lld",&a,&b,&sum);
+
+	  	 	   long long int x=a+b;
+                           long long int n=2*sum/x;        //  n:- number of terms in series
+                           printf("%lld\n",n);
+                           long long int d;                 // d:- common difference
+                           d=(b-a)/(n-5);
+                           long int start=a-2*d;            // start:- first number in series
+                           long int end=b+2*d;
+
+                           for(int i=0;i<n;i++)
+                               {
+                                    printf("%ld ",start+i*d);
+                               }
+
+	  	 }
+}
