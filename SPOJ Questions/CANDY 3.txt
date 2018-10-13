@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(void)
+{
+	   int t;                 // t:- number of test cases
+	   scanf("%d\n",&t);
+	   while(t--)
+	   	  {
+	   	  	   long int n;
+	   	  	   scanf("%ld",&n);
+	   	  	   long int arr[n],sum=0;
+	   	  	   for(int i=0;i<n;i++)
+	   	  	   	 {
+	   	  	   	 	 scanf("%ld\n",&arr[i]);
+
+	   	  	   	 	  sum+=arr[i];
+	   	  	   	 	  if(sum>n)
+	   	  	   	 	    sum=sum%n;
+	   	  	   	 }
+	   	  	   	if(sum%n==0)
+	   	  	   	   {
+	   	  	   	   	   printf("YES\n");
+	   	  	   	   } 
+	   	  	   	else
+	   	  	   	   {
+                       printf("NO\n");
+  	   	  	   	   }   
+
+	   	  }
+}
