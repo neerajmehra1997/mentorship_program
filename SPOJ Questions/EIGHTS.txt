@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	   int t;              // t:- number test cases
+	   scanf("%d",&t);
+	   while(t--)
+	   	 {
+	   	 	  long long int k;             
+	   	 	  scanf("%lld",&k);
+
+	   	 	  long long int n;
+
+	   	 	  n=192+(k-1)*250;
+
+	   	 	  printf("\n%lld",n);
+
+	   	 }
+
+}
