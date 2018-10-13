@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+	    int t;
+	    scanf("%d",&t);
+	    while(t--)
+	    {
+	    	 printf("\n");
+	    	 long int NG,NM;              // NG:- number of monsters in godzilla's amry
+	    	                              // NM:- number of monster in MechaGodzilla's army
+	    	 scanf("%ld %ld",&NG,&NM);
+
+	    	 int arr[NG];                 // arr[]:- strength of godzilla's army
+	    	 int brr[NM];
+	    	 int max1=0;
+	    	 int max2=0;                //  brr[] strength of   MechaGodzilla's army
+
+	    	 for(int i=0;i<NG;i++)
+	    	 	  {
+	    	 	  	  scanf("%d",&arr[i]);
+	    	 	  	  if(arr[i]>max1)
+	    	 	  	  	  max1=arr[i];
+	    	 	  }
+	    	  for(int i=0;i<NM;i++)
+	    	 	  {
+	    	 	  	  scanf("%d",&brr[i]);
+	    	 	  	  if(brr[i]>max2)
+	    	 	  	     max2=brr[i];
+	    	 	  }
+
+	    	  if(max1>=max2)
+	    	 	   {
+	    	 	   	  printf("Godzilla\n");
+	    	 	   }
+	          else
+	          	  {
+	          	  	    printf("MechaGodzilla\n");
+	          	  }
+
+
+
+
+	    }
+
+}
