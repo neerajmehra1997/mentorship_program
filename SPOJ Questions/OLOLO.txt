@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main(void)
+
+{
+
+	   int n;
+
+	   scanf("%d",&n);
+
+	   long  int arr[n];
+
+	   for(int i=0;i<n;i++)
+
+	     {
+
+	     	  scanf("%ld",&arr[i]);
+
+	     }
+
+	     long  int ans=0;
+
+	    for(int i=0;i<n;i++)
+
+	     {
+
+	     	 ans=ans^arr[i];
+
+	     }
+
+   
+	     printf("%ld",ans);
+}
