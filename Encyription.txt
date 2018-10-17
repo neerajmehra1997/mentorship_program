@@ -1,0 +1,47 @@
+                 Question Link:-https://www.hackerrank.com/challenges/encryption/problem
+
+
+MY SOLUTION:---
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+int main(void)
+{
+        char ch[100];
+        gets(ch);
+        int len=strlen(ch);
+       // int x=sqrt(len);
+       // printf("%d\n",len);
+        int start=0,end=0,i;
+        for(i=1;i*i<len;i++)
+            
+         start=i-1;
+         end=i;
+      //  printf("%d %d\n",start,end);
+         while(start*end<len)
+             {
+                start++;
+             }
+     //  printf("%d %d\n",start,end);
+         int a=0;
+         int p=0;
+         int str_len=0;
+         while(str_len<len)
+            {
+                
+                 printf("%c",ch[p]);
+                 str_len++;
+                 p=p+end;
+                 if(p>len-1)
+                   {
+                      a++;
+                      p=a;
+                      printf(" ");
+                   }
+            }
+        
+}
