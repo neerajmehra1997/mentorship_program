@@ -1,0 +1,72 @@
+Question link :-   https://www.hackerrank.com/challenges/almost-sorted/problem
+
+
+
+My Solution
+
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int index[1000]={0};
+int main()
+{ 
+    int n;
+    cin>>n;
+    int arr[n],brr[n];
+    for(int i=0;i<n;i++)
+     {
+           cin>>arr[i];
+           brr[i]=arr[i];
+     }
+     int count=0,l,r,temp=0;
+     sort(brr,brr+n);
+     for(int i=0;i<n;i++)
+        {
+                if(arr[i]!=brr[i])
+                {
+                          
+                     count++;
+                    if(temp==0)
+                     {
+                          l=i;
+                          r=i;
+                     }
+                     else
+                          r=i;
+                    temp=1;
+                }
+                
+        }
+      if(count==0)
+        {
+             cout<<"yes\n";                         
+        }
+      else 
+             {
+                  if(count==2)
+                  {
+                       cout<<"yes\n";
+                       cout<<"swap "<<l+1<<" "<<r+1;
+                       
+                  }
+                 else 
+                 {
+                     for(int i=l,j=r;i<=j;i++,j--)
+                     { 
+                            if(arr[j]!=brr[i])
+                            {
+                                  cout<<"no\n";
+                                  return 0;
+                            } 
+                         
+                     }
+                    cout<<"yes\n";
+                    cout<<"reverse "<<l+1<<" "<<r+1;
+                 }
+             }                
+                      
+  
+
+       
+}
