@@ -1,0 +1,65 @@
+https://www.hackerrank.com/challenges/points-on-rectangle/problem
+
+
+
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+      int t;
+      cin>>t;
+      while(t--)
+      {
+             int n;
+             cin>>n;
+             int x[n],y[n];
+             for(int i=0;i<n;i++)
+             {
+                   cin>>x[i]>>y[i];
+             }
+           int xmax=-100000000,xmin=100000000;
+           int ymax=-100000000,ymin=100000000;
+           for(int i=0;i<n;i++)
+           {  
+                xmax=max(xmax,x[i]);
+                xmin=min(xmin,x[i]);
+                ymax=max(ymax,y[i]);
+                ymin=min(ymin,y[i]);
+           }
+           int temp=0;
+           for(int i=0;i<n;i++)
+              {
+                   if(x[i]==xmax||x[i]==xmin)
+                    {
+                         if(y[i]<=ymax&&y[i]>=ymin)
+                             continue;
+                       else
+                           {
+                             temp=1;
+                             break;
+                           }
+                    }
+                   else if(y[i]==ymax||y[i]==ymin)
+                           {
+                               if(x[i]<=xmax&&x[i]>=xmin)
+                                    continue;
+                               else
+                                   {
+                                          temp=1;
+                                          break;
+                                   }
+                           } 
+                    else
+                       {
+                           temp=1;
+                           break;
+                       }  
+              }
+          if(temp==1)
+              cout<<"NO"<<endl;
+          else
+              cout<<"YES"<<endl;
+      }    
+}
