@@ -1,0 +1,39 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	     long int n,m;
+	     cin>>n>>m;
+	     long int max_sum=0,sum=0,i=0,j=0;
+	     long int arr[n];
+	     for(i=0;i<n;i++)
+	     	 {
+	     	 	 cin>>arr[i];
+	     	 }
+
+	     for(i=0;i<n;i++)
+	       {
+	       	   sum+=arr[i];
+
+	       	   while(sum>m)
+	       	   	 {
+	       	   	 	 sum-=arr[j];
+	       	   	 	 j++;
+
+	       	   	 	 if(sum>max_sum&&sum<=m)
+	       	   	 	 	 {
+	       	   	 	 	 	 max_sum=sum;
+	       	   	 	 	 	 break;
+	       	   	 	 	 }
+	       	   	 }
+
+	       	   if(sum>max_sum&&sum<=m)
+	       	   	   {
+	       	   	   	  max_sum=sum;
+	       	   	   }
+
+
+	       }	 
+	      cout<<max_sum; 
+}

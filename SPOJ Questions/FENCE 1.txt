@@ -1,0 +1,21 @@
+#include<stdio.h>
+#define pie 3.14159
+int main()
+{
+
+	    int l;
+	    while(1)
+	    {
+	        scanf("%d",&l);
+	        if(l==0)
+	        {
+	            break;
+	        }
+
+	       // float rad=l/(2*pie);
+	        float Area=l*l/(2*pie);
+
+	        printf("%0.2f",Area);
+	    }
+
+}
